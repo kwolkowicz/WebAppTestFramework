@@ -1,21 +1,21 @@
 package company.com.db;
 
-import company.com.daos.FmeSourceMetaDataDao;
+import company.com.daos.dbDao;
 
 public enum DaoProvider {
 
     DAO_PROVIDER;
 
-    private final FmeSourceMetaDataDao fmeSourceMetaDataDao;
+    private final dbDao dbDao;
 
     DaoProvider() {
         DbManager dbManager = new DbManager();
-        fmeSourceMetaDataDao = dbManager.getFmeSourceMetaDataDao();
+        dbDao = dbManager.getDbDao();
         dbManager.close();
     }
 
-    public FmeSourceMetaDataDao getFmeSourceMetaDataDao() {
-        return fmeSourceMetaDataDao;
+    public dbDao getDbDao() {
+        return dbDao;
     }
 
 }

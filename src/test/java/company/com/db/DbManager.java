@@ -1,6 +1,6 @@
 package company.com.db;
 
-import company.com.daos.FmeSourceMetaDataDao;
+import company.com.daos.dbDao;
 import org.apache.commons.dbcp.BasicDataSource;
 import org.skife.jdbi.v2.DBI;
 
@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 public class DbManager {
     private final DBI dbi;
-    private final FmeSourceMetaDataDao fmeSourceMetaDataDao;
+    private final dbDao dbDao;
 
 
     public DbManager() {
@@ -19,12 +19,12 @@ public class DbManager {
 
         dbi.registerMapper(new CustomBeanMapperFactory());
 
-        fmeSourceMetaDataDao = createProxy(FmeSourceMetaDataDao.class);
+        dbDao = createProxy(dbDao.class);
     }
 
     private static DataSource initDataSource() {
-        String url = getEnvVarOrDefault("DB_LOCAL_URL", "jdbc:postgresql://Densimg01st:5432/ingest?autoReconnect=true");
-        String username = getEnvVarOrDefault("DB_LOCAL_USERNAME", "ingest");
+        String url = getEnvVarOrDefault("DB_LOCAL_URL", "HERE PROVIDE DB DETAILS");
+        String username = getEnvVarOrDefault("DB_LOCAL_USERNAME", "user");
         String password = getEnvVarOrDefault("DB_LOCAL_PASSWORD", "password");
         BasicDataSource dataSource = new BasicDataSource();
 
@@ -42,13 +42,13 @@ public class DbManager {
         return envValue == null ? defaultValue : envValue;
     }
 
-    public FmeSourceMetaDataDao getFmeSourceMetaDataDao() {
-        return fmeSourceMetaDataDao;
+    public dbDao getDbDao() {
+        return dbDao;
     }
 
 
     public void close() {
-        Stream.of(fmeSourceMetaDataDao)
+        Stream.of(dbDao)
                 .forEach(dao -> dao.close(dbi));
 
     }

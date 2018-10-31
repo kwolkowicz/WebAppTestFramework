@@ -5,9 +5,9 @@
         <groups>
         </groups>
         <classes>
-            <class name="company.com.tests.RegisterTest">
+            <class name="company.com.tests.RestAPITest">
                 <methods>
-                    <include name="registerNewUser"/>
+                    <include name="useRestSpec"/>
                 </methods>
             </class>
         </classes>

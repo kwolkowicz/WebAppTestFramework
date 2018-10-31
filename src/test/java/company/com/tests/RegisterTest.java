@@ -1,20 +1,19 @@
 package company.com.tests;
 
 import company.com.constants.SeleniumCoreConstants;
-import company.com.pageobjects.DashboardPageObject;
-import company.com.pageobjects.RegisterPageObject;
 import company.com.core.SuiteContext;
 import company.com.core.TestBaseManager;
 import company.com.dtos.NewUserDto;
 import company.com.dtos.TestBaseDto;
+import company.com.pageobjects.DashboardPageObject;
+import company.com.pageobjects.RegisterPageObject;
 import org.testng.annotations.Test;
 
-import static org.testng.AssertJUnit.assertEquals;
 import static org.testng.AssertJUnit.assertTrue;
 
 public class RegisterTest extends TestBase {
 
-    @Test(groups = SeleniumCoreConstants.CUSTOMER_GROUP, description = "TC - Create simply entry - ")
+    @Test(groups = SeleniumCoreConstants.CUSTOMER_GROUP, description = "TC - Create new user - ")
     public void registerNewUser() {
         TestBaseDto testBaseDto = TestBaseManager.fetchTestBaseInstance();
         initializeTest(testBaseDto);
