@@ -16,6 +16,11 @@
                     <include name="registerNewUser"/>
                 </methods>
             </class>
+            <class name="company.com.tests.RestAPITest">
+                <methods>
+                    <include name="useRestSpec"/>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>
