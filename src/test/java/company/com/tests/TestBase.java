@@ -59,7 +59,7 @@ public abstract class TestBase {
         openApp(testBaseDto);
         LogInPageObject logInPageObject = new LogInPageObject(testBaseDto);
         logInPageObject.getBlueprint().waitForPageLoad();
-        ExtentTestManager.log(LogStatus.PASS, "Application is open");
+        ExtentTestManager.log(LogStatus.PASS, "Application is opened");
     }
 
     private void openApp(TestBaseDto testBaseDto) {

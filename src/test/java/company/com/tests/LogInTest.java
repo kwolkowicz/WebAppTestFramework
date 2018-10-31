@@ -2,13 +2,12 @@ package company.com.tests;
 
 import company.com.constants.SeleniumCoreConstants;
 import company.com.constants.StatusesConstants;
-import company.com.pageobjects.DashboardPageObject;
 import company.com.core.TestBaseManager;
 import company.com.dtos.TestBaseDto;
+import company.com.pageobjects.DashboardPageObject;
 import org.testng.annotations.Test;
 
 import static org.junit.Assert.assertFalse;
-import static org.testng.AssertJUnit.assertEquals;
 import static org.testng.AssertJUnit.assertTrue;
 
 public class LogInTest extends TestBase {
