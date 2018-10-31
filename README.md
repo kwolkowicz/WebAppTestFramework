@@ -33,4 +33,4 @@ To start using it, You only need to have installed java sdk ("1.8.0_181"), chrom
 
 
 # Example of test report:
-![My image](kwolkowicz.github.com/WebAppTestFramework/reportResults.png)
+![My image](https://github.com/kwolkowicz/WebAppTestFramework/blob/master/reportResults.PNG)
