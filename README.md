@@ -30,3 +30,7 @@ To start using it, You only need to have installed java sdk ("1.8.0_181"), chrom
 5. Report can be found under /target/report/
 6. Scrreenshots can be found under /target/screenshots
 7. Feel free to break tests and try to write more.
+
+
+# Example of test report:
+![My image](kwolkowicz.github.com/WebAppTestFramework/img/image.jpg)
