@@ -28,7 +28,7 @@ public class LogInTest extends TestBase {
         initializeTest(testBaseDto, StatusesConstants.INVALID_USER_ACCESS_LEVEL);
 
         DashboardPageObject dashboardPageObject = new DashboardPageObject(testBaseDto);
-        assertFalse("Wrong page loaded", dashboardPageObject.getBlueprint().isFindFlightPaneDisplayed());
+        assertFalse("Wrong page loaded!", dashboardPageObject.getBlueprint().isFindFlightPaneDisplayed());
 
     }
 }
